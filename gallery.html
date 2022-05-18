@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=egde">
+    <title>Gametalk</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+   
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <nav id="navbar">
+    <div class="container">
+
+       <div class="nav-flex">
+
+           <div class="nav-logo">
+               <h1>Persona</h1>
+           </div>
+
+           <ul class="menu">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="index.html ">Story</a></li>
+               <li><a href="index.html">Gallery</a></li>
+               <li><a href="index.html">Gameplay</a></li>
+           </ul>
+
+        </div>
+
+    </div>
+    </nav>
+
+    <section id="banner">
+        <div class="container">
+            <div class="banner-title">
+                <h1>Persona 5</h1>
+                <p>Japan Role Playing Game</p>
+            </div>
+
+            <a class="btn" href="https://store.playstation.com/en-us/product/UP2611-CUSA05877_00-PERSONA512345678" target="_blank">
+                <i class="fab fa-playstation">Ps4</i>
+            </a>
+
+            <div class="bgm">
+                <audio width="400" controls autoplay>
+                    <source src="soundtrack/02. INFINITY.mp3" type="audio/mpeg">
+                </audio> 
+            </div>
+
+        </div>
+    
+    </section>
+
+    <section id="more-gallery">
+        <div class="container">
+            <div class="gallery1">
+                <div class="box"><img src="img/gameplay/img1.jpg" ></div>
+                <ul class="thumb">
+                    <li><a href="img/gameplay/img1.jpg" target="gallery1"><img src="img/gameplay/img1.jpg"></a></li>
+                    <li><a href="img/gameplay/img2.jpg" target="gallery1"><img src="img/gameplay/img2.jpg"></a></li>
+                    <li><a href="img/gameplay/img3.jpg" target="gallery1"><img src="img/gameplay/img3.jpg"></a></li>
+                    <li><a href="img/gameplay/img4.jpg" target="gallery1"><img src="img/gameplay/img4.jpg"></a></li>
+                    <li><a href="img/gameplay/img5.jpg" target="gallery1"><img src="img/gameplay/img5.jpg"></a></li>
+                    <li><a href="img/gameplay/img6.jpg" target="gallery1"><img src="img/gameplay/img6.jpg"></a></li>
+                    <li><a href="img/gameplay/img7.jpg" target="gallery1"><img src="img/gameplay/img7.jpg"></a></li>
+                </ul>
+
+                
+            </div>
+            <div class="btn-box">
+            <span class="btn">
+                <a href="index.html">Back</a>
+            </span>
+            </div>
+        </div>
+    </section>
+    <!-- end section story -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-flex">
+                <div class="footer-flex-items">
+                    <div class="footer-text">
+                        <h5 style="font-family:Arial, Helvetica, sans-serif">Gametalk(เล่าเรื่องเกมส์)</h5>
+                        <p>เว็บนี้ทำเพื่อการศึกษาในรายวิชาการพัฒนาเว็บไซต์ CPE221</p>
+                    </div>
+                    <ul class="link1">
+                        <li>นายศิวัช ศรีตระกูล 61109010263</li>
+                        <li>นายจักรกฤษณ์ บุญล้อม 61109010433</li>
+                    </ul>
+                </div>
+                <div class="footer-flex-items">
+                    <div class="footer-text">
+                        <h5>Credit</h5>
+                    </div>
+                    <ul class="link">
+                        <li><i class="fab fa-playstation"><a href="https://www.playstation.com/th-th/" target="_blank">Playstation</a></i></li>
+                        <li><i class="fad fa-window""><a href="https://atlus.com/" target="_blank">ATLUS OfficialSite</a></i></li>
+                    </ul>
+                </div>
+                <div class="footer-flex-items">
+                    <div class="footer-text">
+                        <h5></h5>
+                    </div>
+                    <ul class="link">
+                        <li><i class="fas fa-mobile">(+66)99-999-9999</i></li>
+                        <li><i class="fas fa-envelope">Gametalk@gmail.com</i></li>
+                        <br>
+                        <li><a href="contact.html">Contact Us (Click it)</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script type="text/javascript">
+    let progress = document.getElementById('progressbar');
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function(){
+        let progressHeight = (window.pageYOffset /
+        totalHeight)*100;
+        progress.style.height = progressHeight+"%";
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.thumb a').click(function(e){
+            e.preventDefault();
+            $('.box img').attr("src", $(this).attr("href"));
+        })
+    })
+    </script>
+    
+    
+    </body>
+    </html>
